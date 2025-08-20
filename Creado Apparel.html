@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creado Apparel | Nigerian Streetwear & Fashion Clothing</title>
+    <meta name="description" content="Creado Apparel is a Kaduna-based streetwear brand bringing Nigerian creativity to the nation. Shop oversized hoodies, minimalist basics & sustainable fashion for men & women with nationwide shipping.">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary-white: #FFFFFF;
+            --primary-black: #000000;
+            --gray-light: #F5F5F5;
+            --gray-medium: #E5E5E5;
+            --gray-dark: #404040;
+            --accent: #A16207;
+            --accent-light: #D9A959;
+            --radius: 1rem;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --transition: all 0.3s ease;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--primary-black);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        button, .btn {
+            cursor: pointer;
+            border: none;
+            background: none;
+            font-family: inherit;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        
+        .section {
+            padding: 5rem 0;
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--primary-white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            transition: var(--transition);
+        }
+        
+        .navbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.5rem;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-black);
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-link {
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        
+        .nav-link:hover {
+            color: var(--accent);
+        }
+        
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 4px;
+            cursor: pointer;
+        }
+        
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background-color: var(--primary-black);
+            transition: var(--transition);
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            position: relative;
+            margin-top: 70px;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            color: var(--primary-white);
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            padding: 0 1.5rem;
+        }
+        
+        .hero-title {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.25rem;
+            margin-bottom: 2.5rem;
+            font-weight: 400;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: var(--radius);
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-black);
+            color: var(--primary-white);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--accent);
+            transform: translateY(-3px);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            color: var(--primary-white);
+            border: 2px solid var(--primary-white);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--primary-white);
+            color: var(--primary-black);
+            transform: translateY(-3px);
+        }
+        
+        /* Collections Section */
+        .collections {
+            background-color: var(--gray-light);
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .section-subtitle {
+            font-size: 1.125rem;
+            color: var(--gray-dark);
+            margin-bottom: 3rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .collections-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .collection-card {
+            background-color: var(--primary-white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .collection-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        
+        .collection-img {
+            height: 300px;
+            overflow: hidden;
+        }
+        
+        .collection-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .collection-card:hover .collection-img img {
+            transform: scale(1.05);
+        }
+        
+        .collection-content {
+            padding: 1.5rem;
+        }
+        
+        .collection-title {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* USP Section */
+        .usp {
+            background-color: var(--primary-white);
+        }
+        
+        .usp-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .usp-card {
+            text-align: center;
+            padding: 2rem;
+            border-radius: var(--radius);
+            transition: var(--transition);
+        }
+        
+        .usp-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+        
+        .usp-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--accent);
+        }
+        
+        .usp-title {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Brand Story */
+        .brand-story {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1518458028785-8fbcd101ebb9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80') no-repeat center center/cover;
+            color: var(--primary-white);
+        }
+        
+        .brand-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            background-color: var(--gray-light);
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .testimonial-card {
+            background-color: var(--primary-white);
+            padding: 2rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .author-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        
+        .author-info h4 {
+            margin-bottom: 0.25rem;
+        }
+        
+        /* Newsletter */
+        .newsletter {
+            background-color: var(--primary-black);
+            color: var(--primary-white);
+        }
+        
+        .newsletter-form {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .newsletter-input {
+            flex: 1;
+            padding: 1rem;
+            border-radius: var(--radius);
+            border: none;
+            font-family: inherit;
+        }
+        
+        .newsletter-btn {
+            background-color: var(--accent);
+            color: var(--primary-white);
+            padding: 1rem 2rem;
+            border-radius: var(--radius);
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        
+        .newsletter-btn:hover {
+            background-color: var(--accent-light);
+        }
+        
+        /* SEO Section */
+        .seo-section {
+            background-color: var(--primary-white);
+        }
+        
+        .seo-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .seo-keywords {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 2rem;
+        }
+        
+        .keyword {
+            background-color: var(--gray-light);
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            font-size: 0.875rem;
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: var(--primary-black);
+            color: var(--primary-white);
+            padding: 4rem 0 2rem;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .footer-brand h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-links h4 {
+            margin-bottom: 1.5rem;
+            font-size: 1.125rem;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+        
+        .footer-links a {
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-link {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+        
+        .social-link:hover {
+            background-color: var(--accent);
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+            text-align: center;
+        }
+        
+        /* Contact Form */
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: var(--primary-white);
+            padding: 2rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid var(--gray-medium);
+            border-radius: var(--radius);
+            font-family: inherit;
+            transition: var(--transition);
+        }
+        
+        .form-input:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+        
+        .form-textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            background-color: var(--primary-black);
+            color: var(--primary-white);
+            padding: 1rem 2rem;
+            border-radius: var(--radius);
+            font-weight: 600;
+            transition: var(--transition);
+            width: 100%;
+        }
+        
+        .submit-btn:hover {
+            background-color: var(--accent);
+        }
+        
+        /* Shop Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 2000;
+            overflow-y: auto;
+            padding: 2rem 0;
+        }
+        
+        .modal-content {
+            background-color: var(--primary-white);
+            margin: 2rem auto;
+            border-radius: var(--radius);
+            max-width: 1200px;
+            position: relative;
+            animation: modalFadeIn 0.3s;
+        }
+        
+        @keyframes modalFadeIn {
+            from {opacity: 0; transform: translateY(-50px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+        
+        .modal-header {
+            padding: 1.5rem;
+            border-bottom: 1px solid var(--gray-medium);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .close-modal {
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .close-modal:hover {
+            color: var(--accent);
+        }
+        
+        .modal-body {
+            padding: 2rem;
+        }
+        
+        .shop-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .product-card {
+            background-color: var(--gray-light);
+            border-radius: var(--radius);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+        
+        .product-img {
+            height: 250px;
+            overflow: hidden;
+        }
+        
+        .product-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .product-card:hover .product-img img {
+            transform: scale(1.05);
+        }
+        
+        .product-info {
+            padding: 1.5rem;
+        }
+        
+        .product-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .product-price {
+            font-weight: 600;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+        
+        .add-to-cart {
+            background-color: var(--primary-black);
+            color: var(--primary-white);
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--radius);
+            font-weight: 500;
+            width: 100%;
+            transition: var(--transition);
+        }
+        
+        .add-to-cart:hover {
+            background-color: var(--accent);
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+            
+            .nav-menu {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background-color: var(--primary-white);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                transition: var(--transition);
+            }
+            
+            .nav-menu.active {
+                left: 0;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+            }
+            
+            .newsletter-form {
+                flex-direction: column;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+            
+            .section {
+                padding: 3rem 0;
+            }
+            
+            .modal-content {
+                margin: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container container">
+            <a href="#" class="logo">Creado Apparel</a>
+            
+            <ul class="nav-menu">
+                <li><a href="#" class="nav-link">Home</a></li>
+                <li><a href="#collections" class="nav-link">Collections</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content container">
+            <h1 class="hero-title">Creado Apparel – Fashion That Defines You</h1>
+            <p class="hero-subtitle">Modern, versatile, and bold. From Kaduna to the nation — discover apparel that blends streetwear culture with timeless design.</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" id="shopNewBtn">Shop New Arrivals</button>
+                <button class="btn btn-outline" id="exploreCollectionsBtn">Explore Collections</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Collections -->
+    <section id="collections" class="section collections">
+        <div class="container">
+            <h2 class="section-title text-center">Featured Collections</h2>
+            <p class="section-subtitle text-center">From oversized hoodies to clean-cut basics, Creado Apparel brings you fashion that fits every mood. Explore our curated collections designed to elevate your everyday look.</p>
+            
+            <div class="collections-grid">
+                <div class="collection-card">
+                    <div class="collection-img">
+                        <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Streetwear Essentials Collection">
+                    </div>
+                    <div class="collection-content">
+                        <h3 class="collection-title">Streetwear Essentials</h3>
+                        <p>Urban-inspired pieces that make a statement.</p>
+                    </div>
+                </div>
+                
+                <div class="collection-card">
+                    <div class="collection-img">
+                        <img src="https://images.unsplash.com/photo-1485145782098-4f5fd605a66b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Minimalist Classics Collection">
+                    </div>
+                    <div class="collection-content">
+                        <h3 class="collection-title">Minimalist Classics</h3>
+                        <p>Timeless pieces for everyday wear.</p>
+                    </div>
+                </div>
+                
+                <div class="collection-card">
+                    <div class="collection-img">
+                        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Seasonal Drops Collection">
+                    </div>
+                    <div class="collection-content">
+                        <h3 class="collection-title">Seasonal Drops</h3>
+                        <p>Limited edition pieces for each season.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- USP Section -->
+    <section class="section usp">
+        <div class="container">
+            <h2 class="section-title text-center">Why Choose Creado</h2>
+            <p class="section-subtitle text-center">We're committed to delivering exceptional quality while staying true to our roots.</p>
+            
+            <div class="usp-grid">
+                <div class="usp-card">
+                    <div class="usp-icon"><i class="fas fa-leaf"></i></div>
+                    <h3 class="usp-title">Sustainable Fabrics</h3>
+                    <p>Eco-friendly, responsibly sourced materials for a better planet.</p>
+                </div>
+                
+                <div class="usp-card">
+                    <div class="usp-icon"><i class="fas fa-truck"></i></div>
+                    <h3 class="usp-title">Nationwide Shipping</h3>
+                    <p>Delivering from Kaduna to the nation with reliable logistics.</p>
+                </div>
+                
+                <div class="usp-card">
+                    <div class="usp-icon"><i class="fas fa-gem"></i></div>
+                    <h3 class="usp-title">Premium Quality</h3>
+                    <p>Built to last, styled to inspire with attention to detail.</p>
+                </div>
+                
+                <div class="usp-card">
+                    <div class="usp-icon"><i class="fas fa-fire"></i></div>
+                    <h3 class="usp-title">Limited Drops</h3>
+                    <p>Exclusive pieces you won't find anywhere else.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand Story -->
+    <section id="about" class="section brand-story">
+        <div class="container">
+            <div class="brand-content">
+                <h2 class="section-title">Born in Kaduna. Made for the Nation.</h2>
+                <p>Creado Apparel is proudly rooted in Kaduna, Nigeria — a city full of culture, creativity, and style. Our designs are inspired by street culture, crafted with care, and built for those who lead, not follow. From Northern Nigeria to the entire nation, Creado gives you the freedom to create your own vibe.</p>
+                <p>Based in Kaduna State (800282), we draw inspiration from our surroundings while maintaining a global perspective in our designs and quality standards.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section testimonials">
+        <div class="container">
+            <h2 class="section-title text-center">What Our Customers Say</h2>
+            <p class="section-subtitle text-center">Hear from people who have experienced the Creado difference.</p>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"The quality of Creado's hoodies is unmatched. I've been wearing mine for over a year and it still looks brand new. Plus, the style always gets me compliments!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Chinedu Okoro">
+                        </div>
+                        <div class="author-info">
+                            <h4>Chinedu Okoro</h4>
+                            <p>Kaduna, Nigeria</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"As someone who values both style and sustainability, Creado Apparel is my go-to brand. Their commitment to eco-friendly practices while delivering stunning designs is commendable."</p>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=776&q=80" alt="Amina Yusuf">
+                        </div>
+                        <div class="author-info">
+                            <h4>Amina Yusuf</h4>
+                            <p>Abuja, Nigeria</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"I ordered from Lagos and was worried about nationwide shipping, but my package arrived sooner than expected and the quality exceeded my expectations. Will definitely order again!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Tunde Williams">
+                        </div>
+                        <div class="author-info">
+                            <h4>Tunde Williams</h4>
+                            <p>Lagos, Nigeria</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="section newsletter">
+        <div class="container">
+            <h2 class="section-title text-center">Join the Creado Collective</h2>
+            <p class="section-subtitle text-center">Sign up for exclusive drops, styling tips, and 10% off your first order.</p>
+            
+            <form class="newsletter-form">
+                <input type="email" class="newsletter-input" placeholder="Enter your email address" required>
+                <button type="submit" class="newsletter-btn">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- SEO Section -->
+    <section class="section seo-section">
+        <div class="container">
+            <div class="seo-content">
+                <h2 class="section-title text-center">Creado Apparel – Streetwear & Fashion for Men & Women</h2>
+                <p>Creado Apparel is your go-to clothing brand for modern streetwear, minimalist basics, and stylish apparel for men and women. Our collections feature oversized hoodies, graphic tees, joggers, and statement pieces designed for everyday wear. With a focus on sustainability, premium fabrics, and nationwide delivery, Creado Apparel is more than just clothing — it's a lifestyle.</p>
+                <p>Based in Nigeria's vibrant fashion scene, we bring authentic African inspiration to global streetwear trends. Each piece is carefully crafted to ensure comfort, durability, and style that stands out.</p>
+                
+                <div class="seo-keywords">
+                    <span class="keyword">Creado Apparel</span>
+                    <span class="keyword">Streetwear clothing Nigeria</span>
+                    <span class="keyword">Fashion apparel for men & women</span>
+                    <span class="keyword">Oversized hoodies</span>
+                    <span class="keyword">Minimalist basics</span>
+                    <span class="keyword">Joggers</span>
+                    <span class="keyword">Graphic tees</span>
+                    <span class="keyword">Sustainable African fashion brand</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title text-center">Get In Touch</h2>
+            <p class="section-subtitle text-center">Have questions or special requests? We'd love to hear from you.</p>
+            
+            <form class="contact-form" action="submit_form.php" method="POST">
+                <div class="form-group">
+                    <label for="name" class="form-label">Full Name</label>
+                    <input type="text" id="name" name="name" class="form-input" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" id="email" name="email" class="form-input" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject" class="form-label">Subject</label>
+                    <input type="text" id="subject" name="subject" class="form-input" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea id="message" name="message" class="form-input form-textarea" required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>Creado Apparel</h3>
+                    <p>Fashion that defines you. From Kaduna to the nation.</p>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#collections">Collections</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Policies</h4>
+                    <ul>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Privacy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li>Kaduna State, Nigeria (800282)</li>
+                        <li>info@creadoapparel.com</li>
+                        <li>+234 810 123 4567</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2025 Creado Apparel, Kaduna Nigeria. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shop Modal -->
+    <div id="shopModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Shop Our Collections</h2>
+                <span class="close-modal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="shop-grid" id="shopGrid">
+                    <!-- Products will be loaded here dynamically -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile Navigation Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                hamburger.classList.remove('active');
+            });
+        });
+        
+        // Sticky navbar on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+            } else {
+                navbar.style.boxShadow = 'none';
+            }
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Shop Modal Functionality
+        const shopModal = document.getElementById('shopModal');
+        const shopGrid = document.getElementById('shopGrid');
+        const modalTitle = document.getElementById('modalTitle');
+        const closeModal = document.querySelector('.close-modal');
+        const shopNewBtn = document.getElementById('shopNewBtn');
+        const exploreCollectionsBtn = document.getElementById('exploreCollectionsBtn');
+        
+        // Product data
+        const products = {
+            newArrivals: [
+                {
+                    name: "Oversized Graphic Hoodie",
+                    price: "₦15,999",
+                    image: "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=772&q=80",
+                    category: "New Arrivals"
+                },
+                {
+                    name: "Minimalist Cotton Tee",
+                    price: "₦7,499",
+                    image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1160&q=80",
+                    category: "New Arrivals"
+                },
+                {
+                    name: "Relaxed Fit Joggers",
+                    price: "₦12,999",
+                    image: "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+                    category: "New Arrivals"
+                },
+                {
+                    name: "Statement Denim Jacket",
+                    price: "₦22,499",
+                    image: "https://images.unsplash.com/photo-1544022613-e87ca75a784a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+                    category: "New Arrivals"
+                }
+            ],
+            collections: [
+                {
+                    name: "Streetwear Essentials Hoodie",
+                    price: "₦14,999",
+                    image: "https://images.unsplash.com/photo-1556821840-3a63f95609a7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+                    category: "Streetwear"
+                },
+                {
+                    name: "Minimalist Classic Shirt",
+                    price: "₦9,999",
+                    image: "https://images.unsplash.com/photo-1598033129183-c4f50c736f10?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1625&q=80",
+                    category: "Minimalist"
+                },
+                {
+                    name: "Seasonal Drop Jacket",
+                    price: "₦24,999",
+                    image: "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1036&q=80",
+                    category: "Seasonal"
+                },
+                {
+                    name: "Graphic Print Tee",
+                    price: "₦8,499",
+                    image: "https://images.unsplash.com/photo-1562157873-818bc0726f68?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=654&q=80",
+                    category: "Streetwear"
+                },
+                {
+                    name: "Essential Joggers",
+                    price: "₦11,999",
+                    image: "https://images.unsplash.com/photo-1506629905877-52dccff6b4bb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+                    category: "Essentials"
+                },
+                {
+                    name: "Classic Denim Shirt",
+                    price: "₦13,499",
+                    image: "https://images.unsplash.com/photo-1598033129183-c4f50c736f10?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1625&q=80",
+                    category: "Minimalist"
+                }
+            ]
+        };
+        
+        // Function to display products in modal
+        function displayProducts(productArray, title) {
+            shopGrid.innerHTML = '';
+            modalTitle.textContent = title;
+            
+            productArray.forEach(product => {
+                const productCard = document.createElement('div');
+                productCard.className = 'product-card';
+                productCard.innerHTML = `
+                    <div class="product-img">
+                        <img src="${product.image}" alt="${product.name}">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">${product.name}</h3>
+                        <p class="product-price">${product.price}</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                `;
+                shopGrid.appendChild(productCard);
+            });
+            
+            shopModal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+        
+        // Event listeners for buttons
+        shopNewBtn.addEventListener('click', () => {
+            displayProducts(products.newArrivals, 'New Arrivals');
+        });
+        
+        exploreCollectionsBtn.addEventListener('click', () => {
+            displayProducts(products.collections, 'All Collections');
+        });
+        
+        // Close modal
+        closeModal.addEventListener('click', () => {
+            shopModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+        
+        // Close modal when clicking outside
+        window.addEventListener('click', (e) => {
+            if (e.target === shopModal) {
+                shopModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+    </script>
+</body>
+</html>
